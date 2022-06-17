@@ -6,9 +6,7 @@
 body{
     background-color: #0C0C18;
 }
-
 /*Grid System*/
-
 .container{
     height: 100vh;
     width: 100%;
@@ -20,18 +18,15 @@ body{
     
 
 }
- header{
+header{
     grid-area: 1 / 1 / 2 / 5;
- }
- 
- .login-box{
+}
+.login-box{
     grid-area: 2 / 2 / 5 / 3;
 }
-
 .img-login{grid-area: 2 / 3 / 5 / 4;}
-
-
-/**/
+/*--------------------------------------*/
+/*Header section*/
 header{
     height: 60px;
     display: flex;
@@ -44,7 +39,6 @@ header h1{
     font-family: 'Ubuntu Condensed', sans-serif;
    
 }
-
 .separator{
     color: #E1335E;
     
@@ -53,19 +47,13 @@ header h1{
     color: #0B101F;
     text-shadow: 4px 2px 8px #EDFFF9;
 }
-
 header h2{
     margin-right: 20px;
     color:#EDFFF9;
     font-family: 'Ubuntu Condensed', sans-serif;
 }
-
-
-
-
-
-
-
+/*--------------------------------------*/
+/*Login section*/
 .tittle-login{
     display: flex;
     align-items: center;
@@ -74,7 +62,6 @@ header h2{
     font-family: 'Permanent Marker', cursive;
     
 }
-
 
 .login-box{
     height: 70vh;
@@ -85,27 +72,13 @@ header h2{
     -webkit-backdrop-filter: blur( 7.5px );
     border-radius: 10px;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
-  
 }
-
 .img-login img{
     height: 70vh;
     width: 54vh; 
 }
-
-
-
-
-
-
-
-
-
-
-
-
+/*--------------------------------------*/
 /*IMPUT CSS */
-
 .user-box{
     position: relative;
     display: flex;
@@ -132,7 +105,7 @@ form{
 
 input:focus {    
     outline: 0;
-  }
+}
 input{
     height: 30px;
     width: 360px;
@@ -156,29 +129,27 @@ input{
     background-color:#E1335E;
     transition: .4s ease-in-out all;
 }
-
 label {
     position: absolute;
     left: 15px;
     transition: .5s ease all;
     font-size: 20px;
 }
+.img-login img{
 
+    border-radius: 8px;
+}
+/*--------------------------------------*/
+/*Button styles*/
 form a{
     color:#EDFFF9;
     font-family: 'Ubuntu Condensed', sans-serif;
 }
 
-.img-login img{
-
-    border-radius: 8px;
-}
- label.top{
+label.top{
      transform:translateY( -40px);
- }
-
-
-.login-box form a {
+}
+.login-box form #button {
     position: relative;
     display: inline-block;
     padding: 10px 20px;
@@ -190,9 +161,8 @@ form a{
     transition: .5s;
     margin-top: 40px;
     letter-spacing: 4px
-  }
-
-  .login-box a:hover {
+}
+.login-box #button:hover {
   background: #E1335E;
   color: #fff;
   border-radius: 5px;
@@ -201,31 +171,27 @@ form a{
               0 0 50px #E1335E,
               0 0 100px #E1335E;
 }
-
-.login-box a span {
+.login-box #button span {
     position: absolute;
     display: block;
-  }
-  
-  .login-box a span:nth-child(1) {
+}
+.login-box #button span:nth-child(1) {
     top: 0;
     left: -100%;
     width: 100%;
     height: 2px;
     background: linear-gradient(90deg, transparent,#E1335E);
     animation: btn-anim1 1s linear infinite;
-  }
-  
-  @keyframes btn-anim1 {
+}
+@keyframes btn-anim1 {
     0% {
       left: -100%;
     }
     50%,100% {
       left: 100%;
     }
-  }
-  
-  .login-box a span:nth-child(2) {
+}
+.login-box #button span:nth-child(2) {
     top: -100%;
     right: 0;
     width: 2px;
@@ -233,18 +199,16 @@ form a{
     background: linear-gradient(180deg, transparent,#E1335E);
     animation: btn-anim2 1s linear infinite;
     animation-delay: .25s
-  }
-  
-  @keyframes btn-anim2 {
+}
+@keyframes btn-anim2 {
     0% {
       top: -100%;
     }
     50%,100% {
       top: 100%;
     }
-  }
-  
-  .login-box a span:nth-child(3) {
+}
+.login-box #button span:nth-child(3) {
     bottom: 0;
     right: -100%;
     width: 100%;
@@ -252,18 +216,16 @@ form a{
     background: linear-gradient(270deg, transparent,#E1335E);
     animation: btn-anim3 1s linear infinite;
     animation-delay: .5s
-  }
-  
-  @keyframes btn-anim3 {
+}
+@keyframes btn-anim3 {
     0% {
       right: -100%;
     }
     50%,100% {
       right: 100%;
     }
-  }
-  
-  .login-box a span:nth-child(4) {
+}
+.login-box #button span:nth-child(4) {
     bottom: -100%;
     left: 0;
     width: 2px;
@@ -271,19 +233,61 @@ form a{
     background: linear-gradient(360deg, transparent,#E1335E);
     animation: btn-anim4 1s linear infinite;
     animation-delay: .75s
-  }
-  
-  @keyframes btn-anim4 {
+}
+@keyframes btn-anim4 {
     0% {
       bottom: -100%;
     }
     50%,100% {
       bottom: 100%;
     }
-  }
-  
+}
 
-  @media (max-width: 900px) {
+#logout{
+   
+    padding: 8px;
+    color: #E1335E;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 20px;
+    letter-spacing: 4px
+}
+
+#logout:hover {
+    background: #E1335E;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #E1335E,
+                0 0 25px #E1335E,
+                0 0 50px #E1335E,
+                0 0 100px #E1335E;
+  }
+
+  #welcome{
+    position: fixed;
+left: 50%;
+top: 50%;
+transform: translate(-50%, -50%);
+  }
+  #User{
+    color: #E1335E;
+    font-size: 40px;
+  }
+  #User:hover{
+    
+    color: #fff;
+    border-radius: 5px;
+    text-shadow: 0 0 5px #E1335E,
+                0 0 25px #E1335E,
+                0 0 50px #E1335E,
+                0 0 100px #E1335E;
+  }
+/*--------------------------------------*/
+/*Media querys*/
+@media (max-width: 900px) {
     .img-login{display: none;}
     body{
         background-color: #0C0C18;
