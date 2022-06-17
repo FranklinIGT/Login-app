@@ -55,6 +55,16 @@ submit.addEventListener('click',(e)=>{
 }
  function logeo(e){
     e.preventDefault;
+    
+    if (username.value.length===0) {
+        alert('username not value');
+        return;
+    }
+    if (password.value.length===0) {
+        alert('password not value');
+        return;
+    }
+
     const user={
         username: username.value,
         password: password.value
