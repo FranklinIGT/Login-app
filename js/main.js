@@ -6,20 +6,20 @@ const redirect=(url)=>{
             const status= JSON.parse(localStorage.getItem('status'));
             console.log(url) 
             if(status.status!='active'){
-                 return location.href = `Loginapp.github.io`;
+                 return location.href = `http://127.0.0.1:5500/`;
                     
             }
  }
- if(url==='Loginapp.github.io/home.html'){
+ if(url==='http://127.0.0.1:5500/home.html'){
  redirect(url)
  let user=document.getElementById('User')
  let jsonUser=JSON.parse(localStorage.getItem('user'))
  user.innerHTML=` WELCOME ${jsonUser.username}`;
  } 
- if(url==='Loginapp.github.io'){
+ if(url==='http://127.0.0.1:5500/'){
     const status= JSON.parse(localStorage.getItem('status'));
-    if(status.status==='active' && url===`Loginapp.github.io`){
-        location.href ='Loginapp.github.io/home.html'
+    if(status.status==='active' && url===`http://127.0.0.1:5500/`){
+        location.href ='http://127.0.0.1:5500/home.html'
     }
 }
 
@@ -40,7 +40,7 @@ for (let i = 0; i < inputs.length; i++) {
 }
 /*Animation user-b*/
 /*local store*/
-if(url==='Loginapp.github.io'){
+if(url==='http://127.0.0.1:5500/'){
     
 let username= document.getElementById('username')
 let password = document.getElementById('password')
@@ -74,13 +74,13 @@ submit.addEventListener('click',(e)=>{
     localStorage.setItem('user',JSON.stringify(user));
     localStorage.setItem('status',JSON.stringify({status:'active'}));
     console.log(user)
-    location.href = 'Loginapp.github.io/home.html';
+    location.href = 'http://127.0.0.1:5500/home.html';
 }
 
 let logout = document.getElementById('logout');
 logout.addEventListener('click',(e)=>{
     e.preventDefault;
-    location.href = 'Loginapp.github.io'
+    location.href = 'http://127.0.0.1:5500/'
     localStorage.setItem('status',JSON.stringify({status:'none'}));
     localstorage.removeItem('user')
     ;
