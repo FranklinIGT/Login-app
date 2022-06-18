@@ -20,6 +20,7 @@ const redirect=(url)=>{
  user.innerHTML=` WELCOME ${jsonUser.username}`;
  } 
  if(url===urlLogin){
+    console.log(urlLogin)
     const status= JSON.parse(localStorage.getItem('status'));
     if(status.status==='active' && url===urlLogin){
         location.href = urlhome
