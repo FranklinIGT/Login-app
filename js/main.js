@@ -22,7 +22,7 @@ const redirect=(url)=>{
  if(url===urlLogin){
     const status= JSON.parse(localStorage.getItem('status'));
     if(status.status==='active' && url===urlLogin){
-        location.href =urlHome
+        location.href =urlHome;
     }
 }
 
